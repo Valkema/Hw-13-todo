@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  --primary-color: white;
+  --secondary-color: rgb(65, 24, 85);
+    font-size: 16px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+margin: auto;
+margin-top: 50px;
+margin-bottom: 20px;
+width: 60%;
+height: 7vh;
+border-radius: inherit;
+background-color:  var(--primary-color);
+color: var(--primary-color);
+}
+
+input[placeholder] {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input:focus {
+  border: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+  width: 60%;
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(69,9,121,1) 64%, rgba(46,78,166,1) 100%, rgba(0,212,255,1) 100%);
+  box-shadow: 5px 27px 33px -1px rgba(0,0,0,0.35);
+  border: 2px solid var(--secondary-color);
+}
+
+#createTaskBtn, #deleteTaskBtn {
+  width: 120px;
+  height: 40px;
+  margin: 10px;
+  background-color:  var(--secondary-color);
+  border: 1px solid  var(--primary-color);
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#createTaskBtn:hover, #deleteTaskBtn:hover {
+  background-color: var(--primary-color);
+  color:  var(--secondary-color);
+  font-weight: 600;
+  border: 1px solid   var(--secondary-color);
+}
+
+/*------ Valid ------------------*/
+
+.invalid_style {
+  border: 2px solid rgb(107, 0, 0);
+  background-color: rgb(133, 2, 2);
+  color: var(--primary-color);
+}
+
+.valid_style {
+  border: 2px solid rgb(1, 56, 1);
+  background-color: rgb(152, 228, 77);
+  color: var(--primary-color);
+}
+
+
+
+/*------------- Task UL --------------*/
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  background-color: var(--primary-color);
+  margin: 50px;
+}
+
+.taskListItem {
+list-style: none;
+width: 100%;
+display: flex;
+flex-wrap: nowrap;
+align-items: center;
+}
+
+.taskListItem > input {
+margin: 5px;
+padding: 0;
+width: 25px;
+height: 25px;
+cursor: pointer;
+}
+
+.taskContainer {
+margin: 5px;
+width: 90%;
+background-color: rgb(244, 208, 255);
+overflow-wrap:break-word;
+}
+
+.taskDescription {
+  color: var(--secondary-color);
+  font-weight: 700;
+  text-align: left;
+  padding: 10px 10px 3px 10px;
+}
+
+.taskDate {
+  color: rgb(127, 117, 131);
+  text-align: right;
+  font-size: 10px;
+  padding: 5px;
+}
